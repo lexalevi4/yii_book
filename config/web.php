@@ -3,6 +3,17 @@
 return ["id" => "crmapp",
     'basePath' => realpath(__DIR__ . "/../"),
     'components' => [
+        'user'=>[
+            'identityClass'=>'app\models\user\UserRecord'
+        ],
+        'view'=>[
+            'theme'=>[
+                'class'=>'yii\base\Theme',
+                'basePath'=>'@app/themes/snowy'
+
+            ]
+        ],
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false
